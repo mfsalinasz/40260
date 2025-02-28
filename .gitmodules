@@ -1,3 +1,6 @@
 [submodule "FEI"]
 	path = FEI
 	url = https://github.com/mfsalinasz/FEI.git
+[submodule "Poema"]
+	path = Poema
+	url = https://github.com/mfsalinasz/Poema.git
