@@ -1,0 +1,11 @@
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="alumnos.xsd">
+    <alumno>
+        <nombre>Daniel Salinas</nombre>
+        <nacimiento>1985-03-30</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Juan Perez</nombre>
+        <nacimiento>1990-05-15</nacimiento>
+    </alumno>
+</alumnos>
