@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+img {
+  box-shadow: 10px 10px 20px blueviolet;
+  border-radius: 10px; /* Forma rectangular con esquinas redondeadas */
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+img.redonda {
+  border-radius: 50%; /* Al hacer click se vuelve completamente redonda */
+}
+
+figure {
+  display: inline-block;
+  text-align: center;
+  width: 220px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #555;
+}
