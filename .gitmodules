@@ -10,3 +10,6 @@
 [submodule "Ploceus26"]
 	path = Ploceus26
 	url = https://github.com/mfsalinasz/Ploceus26.git
+[submodule "ordinario-ftw"]
+	path = ordinario-ftw
+	url = https://github.com/mfsalinasz/ordinario-ftw.git
