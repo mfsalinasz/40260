@@ -7,3 +7,6 @@
 [submodule "Ecommerce"]
 	path = Ecommerce
 	url = https://github.com/mfsalinasz/Ecommerce.git
+[submodule "Ploceus26"]
+	path = Ploceus26
+	url = https://github.com/mfsalinasz/Ploceus26.git

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../yM.js", "../xM.js", "../zM.js", "../xyzM.js"],
+  "sourcesContent": ["function y(params) {\n    console.log(\"y: \" + params)\n    return \"fin y\"\n}\n\nexport {y}", "import {y} from \"./yM.js\"\n\nfunction x(params){\n    y(\"x\")\n    console.log(\"x: \" + params)\n    return \"fin x\"\n}\n\nfunction xx(params){\n    return \"fin xx\"\n}\n\nexport {x,xx}\n", "function z(params) {\n    console.log(\"z: \" + params)\n    return \"fin z\"\n}\n\nexport {z}", "import * as module from \"./xM.js\";\nimport {y} from \"./yM.js\";\nimport {z} from \"./zM.js\";\n\ndocument.getElementById(\"app\")\nconsole.log(module.x(\"abc\"))\nconsole.log(module.xx(\"def\"))\nconsole.log(y(\"ghi\"))\nconsole.log(z(\"jkl\"))"],
+  "mappings": "MAAA,SAASA,EAAEC,EAAQ,CACf,eAAQ,IAAI,MAAQA,CAAM,EACnB,OACX,CCDA,SAASC,EAAEC,EAAO,CACd,OAAAC,EAAE,GAAG,EACL,QAAQ,IAAI,MAAQD,CAAM,EACnB,OACX,CAEA,SAASE,EAAGF,EAAO,CACf,MAAO,QACX,CCVA,SAASG,EAAEC,EAAQ,CACf,eAAQ,IAAI,MAAQA,CAAM,EACnB,OACX,CCCA,SAAS,eAAe,KAAK,EAC7B,QAAQ,IAAWC,EAAE,KAAK,CAAC,EAC3B,QAAQ,IAAWC,EAAG,KAAK,CAAC,EAC5B,QAAQ,IAAIC,EAAE,KAAK,CAAC,EACpB,QAAQ,IAAIC,EAAE,KAAK,CAAC",
+  "names": ["y", "params", "x", "params", "y", "xx", "z", "params", "x", "xx", "y", "z"]
+}

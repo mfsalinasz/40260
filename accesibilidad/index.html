@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button aria-label="Boton X">x</button>
+    <label for ="u">Nombre de usuario:</label>
+    <input type="text" id="u" aria-describedby="i">
+    <p id ="i">El campo debe tener 6 caracteres alfanúmericos</p>
+
+    <button aria-expanded="false" aria-controls="c" id="menu">Menú</button>
+    <nav id="c" hidden>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <button id="tab-1" role="tab" aria-controls="panel-1" title="Contenido Pestaña 1">Pestaña 1</button>
+        <button id="tab-2" role="tab" aria-controls="panel-2" title="Contenido Pestaña 2">Pestaña 2</button>
+    </div>
+
+    <div id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+        <fieldset>
+            Contenido de la pestaña 1
+            <img src="https://picsum.photos/id/1/100/100" alt="" srcset="" aria-label="Imagen de ejemplo"> 
+        </fieldset>
+    </div>
+
+    <div id="panel-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+       <fieldset>
+            Contenido de la pestaña 2
+            <img src="https://picsum.photos/id/2/100/100" alt="" srcset="" aria-label="Imagen de ejemplo">
+        </fieldset>
+    </div> 
+
+    <script>
+        const menu =document.getElementById("menu");
+        menu.addEventListener("click", () => {
+            let enlaces = document.getElementById("c");
+            console.log(enlaces)
+            if (enlaces.getAttributeNames().includes("hidden")){
+                enlaces.removeAttribute("hidden")
+                menu.setAttribute("aria-expanded","true")
+            }else{
+                enlaces.setAttribute("hidden","")
+                menu.setAttribute("aria-expanded","false")
+            }
+        })
+    </script>
+
+    <script>
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const panels = document.querySelectorAll('[role="tabpanel"]');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetPanel = document.getElementById(tab.getAttribute('aria-controls'));
+
+                tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+                panels.forEach(p => p.setAttribute('hidden', ''));
+
+                tab.setAttribute('aria-selected', 'true');
+                const targetPanelId = tab.getAttribute('aria-controls');
+                document.getElementById(targetPanelId).removeAttribute('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
